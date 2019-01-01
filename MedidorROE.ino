@@ -11,6 +11,9 @@ float r1 = 10000; //Divisor de tensión R1
 float r2 = 3200;  //Divisor de tensión V2
 float vMAX = (5*(r1+r2))/r2; //Vout=Vin(r2/(r1+R2))
 
+// prueba cambio git
+
+
 //Funciones para mostrar los datos en el display
 float CalcVoltios(float rd) {
   return (rd * vMAX) / 1023;
