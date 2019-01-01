@@ -71,12 +71,11 @@ void setup() {
 
 void loop() {
   float voltiosDirectaRaw = 9; // analogRead(pinDIRanalog);
-  if (voltiosDirectaRaw == 0) { //Cuaquier fórmula que permita saber cuando transmite
-    MostrarNoLectura();
-    return;
-  }
+  if (voltiosDirectaRaw == 0)
+    return MostrarNoLectura();
 
   float voltiosReflejadoRaw = 15; // analogRead(pinREFanalog);
+
   float voltiosDirecta = CalcVoltios(voltiosDirectaRaw);   
   float voltiosReflejado = CalcVoltios(voltiosReflejadoRaw);
   float roe = CalcROE(voltiosDirecta, voltiosReflejado);  
